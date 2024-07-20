@@ -41,12 +41,7 @@ console.log(`Sum of 40 and 7 is ${sum(40, 7)}`);
 
 //Task 6
 let contains = (str, ch) => {
-	for(let i = 0; i< str.length; i++){
-		if(str.charAt(i) == ch){
-			return true;
-		}
-	}
-	return false;
+	return str.includes(ch);
 };
 
 console.log(`String "hello Word" contains o : ${contains("hello Word", "o")}`);
@@ -70,7 +65,7 @@ console.log(wish("payal"));
 
 //Activity 5
 //Task 9
-
+//-------- 1 --------
 function sayhello() {
   console.log("hello");
 }
@@ -81,6 +76,23 @@ function manytime(func, n) {
   }
 }
 manytime(sayhello, 5);
+
+//-------- 2 --------
+console.log("===2===");
+function setRepeat(func, n){
+	return function (...args){
+		for(let i = 0; i <  n; i++){
+			func(...args);
+		}
+	};
+}
+
+
+let gooWish = setRepeat((name) => {
+	console.log("May name is "+ name);
+}, 5);
+
+gooWish("Payal");
 
 //Task 10
 
@@ -107,8 +119,6 @@ console.log(hof(square, add10Percent, 10));
 //Achievement
 //Understand and define the function using function declaration, expression and arrow function.
 //Use function parameter and default parameter effectively
-
-
 
 
 
