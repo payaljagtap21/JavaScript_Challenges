@@ -115,6 +115,7 @@ for(let j = 0; j < rows; j++){
     }
 	matrix[j] = arr1;
 }
+console.log(...matrix);
 
 for(let k = 0; k < matrix.length; k++){
 	for(let l = 0; l < matrix[0].length; l++){
